@@ -1,0 +1,87 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title>sign up form</title>
+	<style>
+	</style>
+</head>
+	
+	
+<body>
+
+	<form name="myform" onsubmit="return validateform()" class="form-horizontal	">
+		<div class="container">
+			<h1>Fill Details</h1>
+			<div class="form-group">
+				<label for="inputname3" class="col-sm-2 control-label">First-Name</label>
+				<div class="col-sm-10">
+					<input type="text" name="firstName" class="form-control" id="inputname3" placeholder="First-Name">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputinitial3" class="col-sm-2 control-label">Last-Name</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="inputinitial3" placeholder="Last-Name">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+				<div class="col-sm-10">
+					<input type="text" name="emailver" class="form-control" id="inputEmail3" placeholder="Email">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control" name="pwd" id="inputPassword3" placeholder="Password">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Remember me
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" value="register" class="btn btn-default">Sign in</button>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<a href="#" class="">Already I Have Account</a>
+				</div>
+			</div>
+		</div>
+	</form>
+	<script>
+		function validateform(){
+		var name=document.myform.firstName.value;
+		var password=document.myform.pwd.value;
+			if(name==""){
+				alert("Name Can't be Blank");
+				return false;
+			}
+			else if(password.length<6)
+			{
+				alert("Password Must Be Atleast 6 Characters");
+				return false;
+			}
+			else{
+				alert("Submited Successfully");
+				return true;
+			}
+		}
+	</script>
+</body>
+
+</html>
